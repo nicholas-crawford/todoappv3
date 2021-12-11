@@ -1,7 +1,7 @@
 import React from 'react';
 import { Todo } from "../types/Todo";
 import './TodoItem.css';
-import Button from '../Button/Button';
+import CloseIcon from '@mui/icons-material/Close';
 import Text from "../Text/Text";
 import Checkbox from '@mui/material/Checkbox';
 
@@ -30,7 +30,7 @@ const TodoItem = (props: TodoProps) => {
                 <Checkbox onChange={onComplete} checked={theTodo.completed}/>
                 <Text className={todoCompleted}>{theTodo.text}</Text>
             </div>
-                <Button onClick={onDelete}>X</Button>
+            <CloseIcon className='TodoItem__Cross' onClick={onDelete} />
 
         </div>
     )

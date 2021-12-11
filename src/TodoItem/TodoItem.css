@@ -1,21 +1,31 @@
 .TodoItem {
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .TodoItem__TextAndToggle {
     display: flex;
+    align-items: center;
 }
 
 .TodoItem__Text {
     font-size: 24px;
     font-weight: 300;
     font-family: HelveticaNeue, Helvetica, sans-serif;
-    margin-left: 18px;
+    margin-left: 21px;
+    word-break: break-word;
 }
 
 .TodoItem__Text--completed {
     text-decoration: line-through;
     color: rgba(100, 100, 100, .8);
+}
+
+.TodoItem__Cross {
+    color: #cc9a9a;
+}
+
+.TodoItem__Cross:hover {
+    color: #af5b5e;
 }

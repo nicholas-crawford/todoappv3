@@ -92,6 +92,7 @@ const App = (props: AppProps) => {
                 onEnterPressed={() => addTodo()}
                 value={todoText}
                 onCheckboxClick={toggleAllTodos}
+                todoList={todos}
             />
             <div>
                 {getTodosList().map((todo: Todo) => {

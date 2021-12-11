@@ -44,12 +44,14 @@ const FooterOptions = (props: FooterOptionsProps) => {
 
                     <div className='FilterOptions__Filters'>
                         {getCompletedText()}
-                        {Object.values(FilterOptions).map(value =>
-                            <Filter onClick={setCurrentlyActiveFilter}
-                                    activeFilter={currentlyActiveFilter}
-                                    filter={value}>{value}</Filter>
-                        )
-                        }
+                        <div className='FilterOptions__StatusFilters'>
+                            {Object.values(FilterOptions).map(value =>
+                                <Filter onClick={setCurrentlyActiveFilter}
+                                        activeFilter={currentlyActiveFilter}
+                                        filter={value}>{value}</Filter>
+                            )
+                            }
+                        </div>
                         {getClearText()}
                     </div>
 
