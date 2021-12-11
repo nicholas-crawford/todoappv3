@@ -1,0 +1,21 @@
+.TodoItem {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.TodoItem__TextAndToggle {
+    display: flex;
+}
+
+.TodoItem__Text {
+    font-size: 24px;
+    font-weight: 300;
+    font-family: HelveticaNeue, Helvetica, sans-serif;
+    margin-left: 18px;
+}
+
+.TodoItem__Text--completed {
+    text-decoration: line-through;
+    color: rgba(100, 100, 100, .8);
+}

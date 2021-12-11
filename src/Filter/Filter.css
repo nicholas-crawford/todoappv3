@@ -1,0 +1,15 @@
+.Filter {
+    margin: 0 6px;
+    cursor: pointer;
+    border: 1px solid rgba(175, 47, 47, 0);
+}
+
+.Filter:hover {
+    border: 1px solid rgba(175, 47, 47, 0.1);
+
+}
+
+.Filter--selected {
+    border: 1px solid rgba(175, 47, 47, 0.2);
+
+}

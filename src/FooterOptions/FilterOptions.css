@@ -1,0 +1,22 @@
+.FilterOptions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .FilterOptions {
+        font-size: 14px;
+    }
+}
+
+.FilterOptions__Filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FilterOptions__ClearCompleted:hover{
+    text-decoration: underline;
+
+}
