@@ -1,6 +1,6 @@
 # Todo App V3 (TodoMVC Clone)
 
-This app was modelled around [TodoMVC](https://todomvc.com/examples/react/) with React and Typescript.
+This app was modelled around [TodoMVC](https://todomvc.com/examples/react/) with React and Typescript. I'm still currently working on this one! Keep an eye out for changes.
 
 ## How to run the application:
 
