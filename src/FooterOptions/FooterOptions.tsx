@@ -26,22 +26,25 @@ const FooterOptions = (props: FooterOptionsProps) => {
         return todosArray.filter(todo => !todo.completed).length;
     }
 
+    const clearCompleteClasses = getNotCompletedCount() < todosArray.length ? 'FilterOptions__ClearCompleted' : 'FilterOptions__ClearCompleted FilterOptions__ClearCompleted--hidden';
+
+
     const getCompletedText = () => {
+        // Todo: Refactor for DRY principles
         return mobile ?
             <Text>{`${getNotCompletedCount()} left`}</Text> :
             <Text>{`${getNotCompletedCount()} items left`}</Text>
     }
 
     const getClearText = () => {
-        return mobile ?
-            <Text className='FilterOptions__ClearCompleted' onClick={clearCompletedTodos}>Clear </Text> :
-            <Text className='FilterOptions__ClearCompleted' onClick={clearCompletedTodos}>Clear Completed</Text>
+        // Todo: Refactor for DRY principles
+            return mobile ?
+                <Text className={clearCompleteClasses} onClick={clearCompletedTodos}>Clear </Text> :
+                <Text className={clearCompleteClasses} onClick={clearCompletedTodos}>Clear Completed</Text>
     }
 
     return (
-
                 <div className='FilterOptions'>
-
                     <div className='FilterOptions__Filters'>
                         {getCompletedText()}
                         <div className='FilterOptions__StatusFilters'>
@@ -54,7 +57,6 @@ const FooterOptions = (props: FooterOptionsProps) => {
                         </div>
                         {getClearText()}
                     </div>
-
                 </div>
     )
 }

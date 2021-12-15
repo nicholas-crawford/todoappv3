@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 0 14px;
+    margin-left: 14px;
 }
 
 @media (max-width: 767px) {
@@ -24,4 +24,8 @@
 }
 .FilterOptions__StatusFilters {
  display: flex;
+}
+
+.FilterOptions__ClearCompleted--hidden {
+    visibility: hidden;
 }

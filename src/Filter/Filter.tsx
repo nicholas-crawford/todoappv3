@@ -18,7 +18,7 @@ const Filter = (props: FilterProps) => {
         filter,
     } = props;
 
-    let classes = activeFilter === filter ? 'Filter Filter--selected' : 'Filter';
+    const classes = activeFilter === filter ? 'Filter Filter--selected' : 'Filter';
 
 
     return (

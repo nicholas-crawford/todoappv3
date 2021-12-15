@@ -34,6 +34,7 @@ const App = (props: AppProps) => {
             }
             const updatedTodos = todos.concat([newTodo])
             setTodos(updatedTodos);
+            setTodoText('')
         }
     }
     const deleteTodo = (id: string) => {
@@ -94,15 +95,13 @@ const App = (props: AppProps) => {
                 onCheckboxClick={toggleAllTodos}
                 todoList={todos}
             />
-            <div>
-                {getTodosList().map((todo: Todo) => {
-                    return <TodoItem key={todo.uuid}
-                                     theTodo={todo}
-                                     onDelete={() => deleteTodo(todo.uuid)}
-                                     onComplete={() => toggleCompleteTodo(todo.uuid)}/>
-                })
-                }
-            </div>
+            {getTodosList().map((todo: Todo) => {
+                return <TodoItem key={todo.uuid}
+                                 theTodo={todo}
+                                 onDelete={() => deleteTodo(todo.uuid)}
+                                 onComplete={() => toggleCompleteTodo(todo.uuid)}/>
+            })
+            }
             <FooterOptions todosArray={todos} setCurrentlyActiveFilter={setCurrentlyActiveFilter} clearCompletedTodos={clearCompletedTodos} currentlyActiveFilter={currentlyActiveFilter} mobile={width < 760}/>
         </div>
     </div>

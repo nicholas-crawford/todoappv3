@@ -7,7 +7,7 @@
 .App__Content {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    min-width: 550px;
 }
 
 .App__Heading {

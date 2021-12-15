@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.TodoItem:hover .TodoItem__Cross {
+    visibility: visible;
+}
+
 .TodoItem__TextAndToggle {
     display: flex;
     align-items: center;
@@ -23,6 +27,7 @@
 }
 
 .TodoItem__Cross {
+    visibility: hidden;
     color: #cc9a9a;
 }
 
